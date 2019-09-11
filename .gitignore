@@ -1,0 +1,3 @@
+.vagrant/
+vagrant-kubernetes-setup/ca.crt
+vagrant-kubernetes-setup/join-command
