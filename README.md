@@ -76,7 +76,7 @@ $ kubectl get services -A
 NAMESPACE     NAME                   TYPE           CLUSTER-IP     EXTERNAL-IP     PORT(S)                  AGE
 default       kubernetes             ClusterIP      10.96.0.1      <none>          443/TCP                  123m
 kube-system   kube-dns               ClusterIP      10.96.0.10     <none>          53/UDP,53/TCP,9153/TCP   123m
-kube-system   kubernetes-dashboard   LoadBalancer   10.98.72.161   192.168.1.240   8443:30339/TCP           27s
+kube-system   kubernetes-dashboard   LoadBalancer   10.98.72.161   192.168.50.240   8443:30339/TCP           27s
 
 ```
 
