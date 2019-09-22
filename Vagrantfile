@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
     registry.vm.network "private_network", ip: "192.168.50.9"
     registry.vm.hostname = "registry"
     registry.vm.provision "ansible" do |ansible|
-      ansible.playbook = "vagrant-kubernetes-setup/registry-playbook.yml"
+      ansible.playbook = "setup/registry-playbook.yml"
       ansible.extra_vars = {
         node_ip: "192.168.1.50.9"
       }
@@ -27,7 +27,7 @@ Vagrant.configure("2") do |config|
     master.vm.network "private_network", ip: "192.168.50.10"
     master.vm.hostname = "k8s-master"
     master.vm.provision "ansible" do |ansible|
-      ansible.playbook = "vagrant-kubernetes-setup/master-playbook.yml"
+      ansible.playbook = "setup/master-playbook.yml"
       ansible.extra_vars = {
         node_ip: "192.168.50.10",
       }
@@ -40,7 +40,7 @@ Vagrant.configure("2") do |config|
       node.vm.network "private_network", ip: "192.168.50.#{i + 10}"
       node.vm.hostname = "node-#{i}"
       node.vm.provision "ansible" do |ansible|
-        ansible.playbook = "vagrant-kubernetes-setup/node-playbook.yml"
+        ansible.playbook = "setup/node-playbook.yml"
         ansible.extra_vars = {
           node_ip: "192.168.50.#{i + 10}",
           }
