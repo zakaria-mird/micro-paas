@@ -105,11 +105,11 @@
 
     - name: Install Metallb load balancer
       become: false
-      command: kubectl apply -f https://raw.githubusercontent.com/google/metallb/v0.6.2/manifests/metallb.yaml
+      command: kubectl apply -f /vagrant/setup/config/metallb.yaml 
     
     - name: Apply metallb configuration
       become: false
-      command: kubectl create -f /vagrant/setup/config/metallb.yml
+      command: kubectl create -f /vagrant/setup/config/metallb-config.yaml
 
     - name: Install kubernetes dashboard
       become: false
